@@ -67,6 +67,7 @@
     "@dicebear/core": "^9.2.3",
     "@fontsource/inter": "^5.2.8",
     "@hello-pangea/dnd": "^17.0.0",
+    "@neondatabase/serverless": "^1.0.2",
     "@prisma/adapter-pg": "^6.18.0",
     "@prisma/client": "^6.18.0",
     "@prisma/extension-read-replicas": "^0.4.1",

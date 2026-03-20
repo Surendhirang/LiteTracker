@@ -13,6 +13,7 @@ const forceSSL = process.env.FORCE_SSL || '';
 const frameAncestors = process.env.ALLOWED_FRAME_URLS || '';
 const trackerScriptName = process.env.TRACKER_SCRIPT_NAME || '';
 const trackerScriptURL = process.env.TRACKER_SCRIPT_URL || '';
+const isWindows = process.platform === 'win32';
 
 const contentSecurityPolicy = `
   default-src 'self';
@@ -173,7 +174,8 @@ export default {
     defaultLocale,
   },
   basePath,
-  output: 'standalone',
+  // Keep standalone for container builds, but avoid Windows copyfile issues with traced chunk names.
+  output: isWindows ? undefined : 'standalone',
   eslint: {
     ignoreDuringBuilds: true,
   },
