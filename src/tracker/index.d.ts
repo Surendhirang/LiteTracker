@@ -81,7 +81,7 @@ export type CustomEventFunction = (
   props: PageViewProperties,
 ) => EventProperties | PageViewProperties;
 
-export type UmamiTracker = {
+export type LiteTrackerTracker = {
   track: {
     /**
      * Track a page view
@@ -149,5 +149,5 @@ export type UmamiTracker = {
 };
 
 export interface Window {
-  umami: UmamiTracker;
+    litetracker: LiteTrackerTracker;
 }

@@ -1,13 +1,12 @@
-{
-  "name": "umami",
-  "version": "3.0.3",
-  "description": "A modern, privacy-focused alternative to Google Analytics.",
-  "author": "Umami Software, Inc. <hello@umami.is>",
+ {
+  "name": "litetracker",
+  "version": "1.0.0",
+  "description": "A lightweight, privacy-focused analytics tracker.",
+  "author": "Surendhiran G <you@yourdomain.com>",
   "license": "MIT",
-  "homepage": "https://umami.is",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umami-software/umami.git"
+    "url": "https://github.com/Surendhirang/litetracker.git"
   },
   "type": "module",
   "scripts": {

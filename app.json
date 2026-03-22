@@ -1,13 +1,12 @@
 {
-  "name": "Umami",
-  "description": "Umami is a simple, fast, website analytics alternative to Google Analytics.",
+  "name": "LiteTracker",
+  "description": "LiteTracker is a lightweight, privacy-focused analytics tracker.",
   "keywords": ["analytics", "charts", "statistics", "web-analytics"],
-  "website": "https://umami.is",
-  "repository": "https://github.com/umami-software/umami",
+  "repository": "https://github.com/Surendhirang/litetracker",
   "addons": ["heroku-postgresql"],
   "env": {
     "APP_SECRET": {
-      "description": "Used to generate unique values for your installation",
+      "description": "Used to generate unique values for your LiteTracker installation",
       "required": true,
       "generator": "secret"
     }
