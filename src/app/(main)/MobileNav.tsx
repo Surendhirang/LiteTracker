@@ -28,12 +28,6 @@ export function MobileNav() {
       path: '/links',
       icon: <LinkIcon />,
     },
-    {
-      id: 'pixels',
-      label: formatMessage(labels.pixels),
-      path: '/pixels',
-      icon: <Grid2x2 />,
-    },
   ];
 
   return (

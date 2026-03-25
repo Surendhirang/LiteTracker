@@ -12,7 +12,6 @@ export async function GET(request: Request) {
     cloudMode: !!process.env.CLOUD_MODE,
     faviconUrl: process.env.FAVICON_URL,
     linksUrl: process.env.LINKS_URL,
-    pixelsUrl: process.env.PIXELS_URL,
     privateMode: !!process.env.PRIVATE_MODE,
     telemetryDisabled: !!process.env.DISABLE_TELEMETRY,
     trackerScriptName: process.env.TRACKER_SCRIPT_NAME,

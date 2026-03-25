@@ -15,7 +15,6 @@ export const UPDATES_URL = '';
 export const TELEMETRY_PIXEL = '';
 export const FAVICON_URL = 'https://icons.duckduckgo.com/ip3/{{domain}}.ico';  // ← keep as-is
 export const LINKS_URL = `${globalThis?.location?.origin}/q`;                  // ← keep as-is
-export const PIXELS_URL = `${globalThis?.location?.origin}/p`;                 // ← keep as-is
 
 export const DEFAULT_LOCALE = 'en-US';
 export const DEFAULT_THEME = 'light';

@@ -6,7 +6,6 @@ export type Config = {
   cloudMode: boolean;
   faviconUrl?: string;
   linksUrl?: string;
-  pixelsUrl?: string;
   privateMode: boolean;
   telemetryDisabled: boolean;
   trackerScriptName?: string;
