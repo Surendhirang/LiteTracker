@@ -66,11 +66,13 @@ async function checkDatabaseVersion() {
 }
 
 async function applyMigration() {
-  if (!process.env.SKIP_DB_MIGRATION) {
-    console.log(execSync('prisma migrate deploy').toString());
-
-    success('Database is up to date.');
+  if (process.env.VERCEL || process.env.SKIP_DB_MIGRATION) {
+    console.log('Skipping database migration.');
+    return;
   }
+
+  console.log(execSync('prisma migrate deploy').toString());
+  success('Database is up to date.');
 }
 
 (async () => {
