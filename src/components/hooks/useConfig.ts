@@ -5,7 +5,6 @@ import { setConfig, useApp } from '@/store/app';
 export type Config = {
   cloudMode: boolean;
   faviconUrl?: string;
-  linksUrl?: string;
   privateMode: boolean;
   telemetryDisabled: boolean;
   trackerScriptName?: string;

@@ -1,4 +1,3 @@
-export * from './link';
 export * from './report';
 export * from './segment';
 export * from './team';

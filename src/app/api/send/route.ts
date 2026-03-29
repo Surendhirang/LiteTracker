@@ -26,8 +26,6 @@ const schema = z.object({
   payload: z
     .object({
       website: z.uuid().optional(),
-      link: z.uuid().optional(),
-      pixel: z.uuid().optional(),
       data: anyObjectParam.optional(),
       hostname: z.string().max(100).optional(),
       language: z.string().max(35).optional(),
@@ -45,17 +43,14 @@ const schema = z.object({
       os: z.string().optional(),
       device: z.string().optional(),
     })
-    .refine(
-      data => {
-        const keys = [data.website, data.link, data.pixel];
-        const count = keys.filter(Boolean).length;
-        return count === 1;
-      },
-      {
-        message: 'Exactly one of website, link, or pixel must be provided',
-        path: ['website'],
-      },
-    ),
+.refine(
+  data => {
+    const keys = [data.website];
+    const count = keys.filter(Boolean).length;
+    return count === 1;
+  },
+  { message: 'Exactly one of website or pixel must be provided', path: ['website'] },
+),
 });
 
 export async function POST(request: Request) {
@@ -70,8 +65,6 @@ export async function POST(request: Request) {
 
     const {
       website: websiteId,
-      pixel: pixelId,
-      link: linkId,
       hostname,
       screen,
       language,
@@ -85,7 +78,7 @@ export async function POST(request: Request) {
       id,
     } = payload;
 
-    const sourceId = websiteId || pixelId || linkId;
+    const sourceId = websiteId;
 
     // Cache check
     let cache: Cache | null = null;
@@ -202,14 +195,6 @@ export async function POST(request: Request) {
         referrerQuery = referrerUrl.search.substring(1);
         referrerDomain = referrerUrl.hostname.replace(/^www\./, '');
       }
-
-      const eventType = linkId
-        ? EVENT_TYPE.linkEvent
-        : pixelId
-          ? EVENT_TYPE.pixelEvent
-          : name
-            ? EVENT_TYPE.customEvent
-            : EVENT_TYPE.pageView;
 
       await saveEvent({
         websiteId: sourceId,
