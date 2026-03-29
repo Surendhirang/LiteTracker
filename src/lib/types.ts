@@ -117,26 +117,6 @@ export interface PageResult<T> {
   search?: string;
 }
 
-export interface RealtimeData {
-  countries: Record<string, number>;
-  events: any[];
-  pageviews: any[];
-  referrers: Record<string, number>;
-  timestamp: number;
-  series: {
-    views: any[];
-    visitors: any[];
-  };
-  totals: {
-    views: number;
-    visitors: number;
-    events: number;
-    countries: number;
-  };
-  urls: Record<string, number>;
-  visitors: any[];
-}
-
 export interface ApiError extends Error {
   code?: string;
   message: string;

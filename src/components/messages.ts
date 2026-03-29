@@ -77,7 +77,6 @@ export const labels = defineMessages({
   profiles: { id: 'label.profiles', defaultMessage: 'Profiles' },
   dashboard: { id: 'label.dashboard', defaultMessage: 'Dashboard' },
   more: { id: 'label.more', defaultMessage: 'More' },
-  realtime: { id: 'label.realtime', defaultMessage: 'Realtime' },
   queries: { id: 'label.queries', defaultMessage: 'Queries' },
   teams: { id: 'label.teams', defaultMessage: 'Teams' },
   teamSettings: { id: 'label.team-settings', defaultMessage: 'Team settings' },

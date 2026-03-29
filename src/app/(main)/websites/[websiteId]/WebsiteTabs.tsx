@@ -1,6 +1,6 @@
 import { Icon, Row, Tab, TabList, Tabs, Text } from '@umami/react-zen';
 import { useMessages, useNavigation, useWebsite } from '@/components/hooks';
-import { ChartPie, Clock, Eye, User } from '@/components/icons';
+import { ChartPie, Eye, User } from '@/components/icons';
 import { Lightning } from '@/components/svg';
 
 export function WebsiteTabs() {
@@ -26,12 +26,6 @@ export function WebsiteTabs() {
       label: formatMessage(labels.sessions),
       icon: <User />,
       path: '/sessions',
-    },
-    {
-      id: 'realtime',
-      label: formatMessage(labels.realtime),
-      icon: <Clock />,
-      path: '/realtime',
     },
     {
       id: 'reports',

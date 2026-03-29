@@ -24,9 +24,6 @@ export const DEFAULT_RESET_DATE = '2000-01-01';
 export const DEFAULT_PAGE_SIZE = 20;
 export const DEFAULT_DATE_COMPARE = 'prev';
 
-export const REALTIME_RANGE = 30;
-export const REALTIME_INTERVAL = 10000;
-
 export const UNIT_TYPES = ['year', 'month', 'hour', 'day', 'minute'];
 
 export const EVENT_COLUMNS = [
