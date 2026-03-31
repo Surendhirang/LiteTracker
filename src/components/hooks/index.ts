@@ -6,6 +6,7 @@ export * from './context/useUser';
 export * from './context/useWebsite';
 
 // Query hooks
+export * from './queries/useActiveUsersQuery';
 export * from './queries/useDateRangeQuery';
 export * from './queries/useDeleteQuery';
 export * from './queries/useEventDataEventsQuery';
@@ -13,6 +14,7 @@ export * from './queries/useEventDataPropertiesQuery';
 export * from './queries/useEventDataQuery';
 export * from './queries/useEventDataValuesQuery';
 export * from './queries/useLoginQuery';
+export * from './queries/useRealtimeQuery';
 export * from './queries/useReportQuery';
 export * from './queries/useReportsQuery';
 export * from './queries/useResultQuery';

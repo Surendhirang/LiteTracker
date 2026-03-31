@@ -4,6 +4,7 @@ import { useMessages, useNavigation } from '@/components/hooks';
 import {
   AlignEndHorizontal,
   ChartPie,
+  Clock,
   Eye,
   Sheet,
   Tag,
@@ -51,6 +52,12 @@ export function WebsiteNav({
           label: formatMessage(labels.sessions),
           icon: <User />,
           path: renderPath('/sessions'),
+        },
+        {
+          id: 'realtime',
+          label: formatMessage(labels.realtime),
+          icon: <Clock />,
+          path: renderPath('/realtime'),
         },
         {
           id: 'compare',

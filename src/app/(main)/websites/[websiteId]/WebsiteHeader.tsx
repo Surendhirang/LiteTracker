@@ -6,6 +6,7 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { useMessages, useNavigation, useWebsite } from '@/components/hooks';
 import { Edit, Share } from '@/components/icons';
 import { DialogButton } from '@/components/input/DialogButton';
+import { ActiveUsers } from '@/components/metrics/ActiveUsers';
 
 export function WebsiteHeader({ showActions }: { showActions?: boolean }) {
   const website = useWebsite();
@@ -25,6 +26,7 @@ export function WebsiteHeader({ showActions }: { showActions?: boolean }) {
       titleHref={renderUrl(`/websites/${website.id}`, false)}
     >
       <Row alignItems="center" gap="6" wrap="wrap">
+        <ActiveUsers websiteId={website.id} />
 
         {showActions && (
           <Row alignItems="center" gap>
