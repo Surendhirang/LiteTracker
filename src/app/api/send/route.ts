@@ -43,14 +43,14 @@ const schema = z.object({
       os: z.string().optional(),
       device: z.string().optional(),
     })
-.refine(
-  data => {
-    const keys = [data.website];
-    const count = keys.filter(Boolean).length;
-    return count === 1;
-  },
-  { message: 'Exactly one of website or pixel must be provided', path: ['website'] },
-),
+    .refine(
+      data => {
+        const keys = [data.website];
+        const count = keys.filter(Boolean).length;
+        return count === 1;
+      },
+      { message: 'Exactly one of website or pixel must be provided', path: ['website'] },
+    ),
 });
 
 export async function POST(request: Request) {
@@ -200,7 +200,7 @@ export async function POST(request: Request) {
         websiteId: sourceId,
         sessionId,
         visitId,
-        eventType,
+        eventType: EVENT_TYPE.pageView,
         createdAt,
 
         // Page
