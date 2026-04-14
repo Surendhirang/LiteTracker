@@ -26,6 +26,7 @@ export async function GET(
       ...query,
       startAt: subMinutes(startOfMinute(new Date()), REALTIME_RANGE).getTime(),
       endAt: Date.now(),
+      unit: 'minute',
     },
     websiteId,
   );

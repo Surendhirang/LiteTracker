@@ -33,7 +33,7 @@ async function relationalQuery(websiteId: string, filters: QueryFilters) {
         website_event.referrer_domain as "referrerDomain"
     from website_event
     ${cohortQuery}
-    inner join session
+    left join session
       on session.session_id = website_event.session_id
         and session.website_id = website_event.website_id
     where website_event.website_id = {{websiteId::uuid}}
