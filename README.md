@@ -24,8 +24,8 @@
 ### Get the source code and install packages
 
 ```bash
-git clone https://github.com/umami-software/umami.git
-cd umami
+git clone https://github.com/Surendhirang/LiteTracker.git
+cd Litetracker
 pnpm install
 ```
 
@@ -61,24 +61,6 @@ By default, this will launch the application on `http://localhost:3000`. You wil
 
 ---
 
-## 🐳 Installing with Docker
-
-Umami provides Docker images as well as a Docker compose file for easy deployment.
-
-Docker image:
-
-```bash
-docker pull docker.umami.is/umami-software/umami:latest
-```
-
-Docker compose (Runs Umami with a PostgreSQL database):
-
-```bash
-docker compose up -d
-```
-
----
-
 ## 🔄 Getting Updates
 
 To get the latest features, simply do a pull, install any new dependencies, and rebuild:
@@ -89,35 +71,5 @@ pnpm install
 pnpm build
 ```
 
-To update the Docker image, simply pull the new images and rebuild:
 
-```bash
-docker compose pull
-docker compose up --force-recreate -d
-```
 
----
-
-## 🛟 Support
-
-<p align="center">
-  <a href="https://github.com/umami-software/umami"><img src="https://img.shields.io/badge/GitHub--blue?style=social&logo=github" alt="GitHub" /></a>
-  <a href="https://twitter.com/umami_software"><img src="https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter" alt="Twitter" /></a>
-  <a href="https://linkedin.com/company/umami-software"><img src="https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin" alt="LinkedIn" /></a>
-  <a href="https://umami.is/discord"><img src="https://img.shields.io/badge/Discord--blue?style=social&logo=discord" alt="Discord" /></a>
-</p>
-
-[release-shield]: https://img.shields.io/github/release/umami-software/umami.svg
-[releases-url]: https://github.com/umami-software/umami/releases
-[license-shield]: https://img.shields.io/github/license/umami-software/umami.svg
-[license-url]: https://github.com/umami-software/umami/blob/master/LICENSE
-[build-shield]: https://img.shields.io/github/actions/workflow/status/umami-software/umami/ci.yml
-[build-url]: https://github.com/umami-software/umami/actions
-[github-shield]: https://img.shields.io/badge/GitHub--blue?style=social&logo=github
-[github-url]: https://github.com/umami-software/umami
-[twitter-shield]: https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter
-[twitter-url]: https://twitter.com/umami_software
-[linkedin-shield]: https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin
-[linkedin-url]: https://linkedin.com/company/umami-software
-[discord-shield]: https://img.shields.io/badge/Discord--blue?style=social&logo=discord
-[discord-url]: https://discord.com/invite/4dz4zcXYrQ
